@@ -1,9 +1,10 @@
-from stats import word_counter
+from stats import word_counter, char_counter
 
 def main(book_as_path):
     book_contents = get_book_text(book_as_path)
     num_words = word_counter(book_contents)
-    return print(f"Found {num_words} total words")
+    ch = char_counter(book_contents)
+    return print(f"Found {num_words} total words" , f"Character dictionary {ch}")
 
 def get_book_text(book_path):
     # reads the text of a book from the given file path, returns the text as a string
